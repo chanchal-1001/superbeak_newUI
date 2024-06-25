@@ -171,7 +171,7 @@ class KeySet:
 
 if __name__ == "__main__":
     # Superbeak() 
-    # key1_bought = "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"   
+       
     # openai.api_key = key1_bought      
     # logger.info(os.environ)  
     #os.environ.pop('OPENAI_API_KEY')       

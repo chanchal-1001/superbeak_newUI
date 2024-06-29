@@ -1,6 +1,6 @@
 from tkinter import font
 import tkinter as tk
-from custom_logger import logger
+from src.custom_logger import logger
 
 class Table(tk.Frame):
     def __init__(self, parent, file_dict):

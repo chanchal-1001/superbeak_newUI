@@ -1,4 +1,4 @@
-from custom_logger import logger
+from src.custom_logger import logger
 import os
 import math
 import fitz

@@ -12,7 +12,7 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.docstore.document import Document
 from tkinter import messagebox
-from custom_logger import logger
+from src.custom_logger import logger
 from src.table import Table
 import src.file_handler as fh
 from tkinter import scrolledtext
@@ -22,9 +22,10 @@ import src.resource_handler as resource
 
 class Superbeak:
     def __init__(self):
+        logger.info("LOADING THE APPLICATION...")
         self.window = tk.Tk()        
         self.window.title("Super Beak")
-        self.window.iconbitmap("images/superbeak.ico")
+        #self.window.iconbitmap("images/superbeak.ico")
         # width = self.window.winfo_screenwidth() 
         # height= self.window.winfo_screenheight()
         # #self.window.geometry("700x600-0+0")   
@@ -170,7 +171,7 @@ class KeySet:
 
 
 if __name__ == "__main__":
-   
+    logger.info("STARTING THE APPLICATION...")
     if "OPENAI_API_KEY" in os.environ :
         #del os.environ["OPENAI_API_KEY"]   
         openai.api_key = os.getenv("OPENAI_API_KEY")

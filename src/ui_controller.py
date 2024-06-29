@@ -1,6 +1,6 @@
 import os
 import tkinter as tk
-from custom_logger import logger
+from src.custom_logger import logger
 import src.resource_handler as res
 import src.file_handler as fh
         

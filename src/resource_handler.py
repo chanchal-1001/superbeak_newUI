@@ -1,4 +1,4 @@
-from custom_logger import logger
+from src.custom_logger import logger
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.docstore.document import Document

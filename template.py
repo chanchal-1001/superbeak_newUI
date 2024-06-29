@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from custom_logger import logger
+from src.custom_logger import logger
 
 list_of_files = [
     "src/__init__.py",    

@@ -65,8 +65,6 @@ def getVectorIndexForLoader(self):
                                             chain_type_kwargs = {"prompt": PROMPT})
         self.showChatWindow()
     except Exception as e:
-        #Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-8GzZG***************************************ACrs. 
-        # You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
         logger.info(f"An error occurred: {e}")            
         if e.message:              
             self.errorMsg.config( text=e.message , fg="red")

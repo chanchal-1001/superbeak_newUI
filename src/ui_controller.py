@@ -75,6 +75,9 @@ def hideReset(self):
     self.reset.place_forget()
 
 def reset_key(self):
+    # self.enter_new_key_lbl.place(x=900, y=20)
+    # self.enter_new_key.place(x=900, y=45)
+    #self.reset.place(x=900, y=70)
     self.enter_new_key_lbl.pack()
     self.enter_new_key.pack()
-    self.reset.place(x=1000, y=155)
+    self.reset.place(x=1000, y=140)

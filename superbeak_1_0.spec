@@ -5,8 +5,8 @@ a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[('src', 'src'), ('images', 'images')],
-    hiddenimports=[],
+    datas=[('src', 'src'), ('images/*.*', 'images')],
+    hiddenimports=['tiktoken_ext.openai_public', 'tiktoken_ext'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -35,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['superbeak.ico'],
 )

@@ -108,7 +108,7 @@ class Superbeak:
         print("setting called")
         key = self.enter_new_key.get()
         key = key.strip()        
-        if key and key.startswith("sk-"):                     
+        if key:                     
             resource.setEnvironmentVariable('OPENAI_API_KEY', key) 
             openai.api_key = os.getenv("OPENAI_API_KEY")                       
             messagebox.showinfo("Key Alert", "OpenAI Key is Set successfully. You can continue using the Superbeak")  
@@ -171,7 +171,7 @@ class KeySet:
     def setKey(self):
         key = self.resetKeyWindow.entry.get()
         key = key.strip()
-        if key and key.startswith("sk-"):                        
+        if key:                        
             isEnvSet = resource.setEnvironmentVariable('OPENAI_API_KEY', key)   
             openai.api_key = os.getenv("OPENAI_API_KEY")           
             messagebox.showinfo("Key Alert", "OpenAI Key is set successfully. Make sure to update the key when expired or no credit available." \
@@ -179,7 +179,7 @@ class KeySet:
             
             self.resetKeyWindow.destroy()            
             if isEnvSet:
-                    Superbeak()
+                Superbeak()
         else:
             messagebox.showinfo("Key Alert", "Please Enter a Valid OpenAI Secret Key")
             self.resetKeyWindow.destroy()        
